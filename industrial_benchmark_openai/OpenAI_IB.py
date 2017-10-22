@@ -85,7 +85,7 @@ class OpenAI_IB(gym.Env):
                 self.info = self.markovianState()
 
                 # Alternative reward that returns the improvement or decrease in the cost function
-                # If the cost function improves/decreases, the reward is positiv
+                # If the cost function improves/decreases, the reward is positive
                 # If the cost function deteriorates/increases, the reward is negative
                 # e.g.: -400 -> -450 = delta_reward of -50
                 self.delta_reward = 0
@@ -132,7 +132,7 @@ class OpenAI_IB(gym.Env):
                 elif self.reward_function == 'delta':
                         return_reward = self.delta_reward
                 else:
-                        raise ValueError('Invalid reward function specification. "classic" for the original cost function or "delta" for the change in the cost fucntion between steps.')
+                        raise ValueError('Invalid reward function specification. "classic" for the original cost function or "delta" for the change in the cost function between steps.')
 
                 # Print to track agent & environment during training
                 print ' Cost smoothed:', -self.smoothed_cost, ' State (v,g,s):', np.around(self.IB.visibleState()[1:4], 0), '\t Action: ', _action,
