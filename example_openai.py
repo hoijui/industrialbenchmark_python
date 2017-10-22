@@ -23,6 +23,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
+
+# Example Industrial-Benchmark run, using the OpenAI interface with DQN and KerasRL (discrete)
+
 import numpy as np
 
 from keras.models import Sequential
@@ -33,7 +36,7 @@ from rl.agents.dqn import DQNAgent
 from rl.policy import BoltzmannQPolicy
 from rl.memory import SequentialMemory
 
-from OpenAI_IB import OpenAI_IB
+from openai.OpenAI_IB import OpenAI_IB
 
 # Get the environment and extract the number of actions.
 env = OpenAI_IB(setpoint=50, reward_type='classic', action_type='discrete')

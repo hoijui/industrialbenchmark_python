@@ -29,7 +29,7 @@ from gym import error, spaces, utils
 from gym.utils import seeding
 import sys
 sys.path.append('../')
-from industrial_benchmark_python.IDS import IDS
+from engine.IDS import IDS
 
 from collections import OrderedDict
 
